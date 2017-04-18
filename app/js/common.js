@@ -19,9 +19,9 @@ $(function() {
 
 
         showSubmenuTimer = setTimeout(function() {
-            $('.sub').slideDown('fast');
+            $('.sub').show();
 			$('#' + selfId + '-sub').show();
-        }, 100);
+        }, 2);
 
         curMenuitem = $(this);
         $(this).addClass('active');
@@ -33,7 +33,7 @@ $(function() {
 				$('#' + id + '-sub').hide();
 				$('.sub').hide();
 				$(self).removeClass('active');
-			}, 20);
+			}, 1);
 			clearInterval(showSubmenuTimer);
         }
     );
