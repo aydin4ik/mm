@@ -50,16 +50,7 @@ body
 	background: #fff
 	border-bottom: 1px solid #bbb
 	position: relative
-	.sub
-		position: absolute
-		top: 71px
-		left: 0
-		background: #fff
-		width: 100%
-		height: 200px
-		display: none
-		&-item
-			display: none
+	
 	a
 		text-decoration: none
 		color: #222
@@ -106,7 +97,51 @@ body
 				padding: 25px 20px
 			.double
 				padding: 20px 20px
+	.sub
+		position: absolute
+		top: 71px
+		left: 0
+		background: #fff
+		width: 100%
+		height: 300px
+		display: none
+		padding-top: 50px
+		&-item
+			display: none
+		ul:last-child
+			border-right: 1px solid #ccc
+			height: 200px
+			padding-right: 50px
 
-			
+		&-links
+			float: left
+			display: inline-block
+			text-align: left
+			li
+				display: block
+				font-size: 16px
+				text-align: left
+				padding: 7px
+				a:hover
+					text-decoration: underline
+					color: blue
+					
+		&2-links
+			float: left
+			display: inline-block
+			padding-left: 50px
+			li
+				display: block
+				font-size: 14px
+				padding: 5px
+				padding-left: 10px
+				text-align: left
+				a:hover
+					text-decoration: underline
+					color: blue
+				&:first-child
+					font-size: 16px
+					padding-left: 0
+					
 
 @import "media" // Всегда в конце
