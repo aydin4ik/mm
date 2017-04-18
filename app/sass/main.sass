@@ -48,11 +48,26 @@ body
 .navigation
 	box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.1);
 	background: #fff
-	border-bottom: 1px solid #ccc
+	border-bottom: 1px solid #bbb
+	.logo
+		width: 200px
+		float: left
+		a
+			text-decoration: none
+			color: #222
+		img
+			width: 70px
+			float: left
+		span
+			font-size: .9em
+			line-height: 15px
+			display: block
+			padding: 12px
 	ul
 		list-style: none
 		margin: 0
 		padding: 0
+		float: right
 		li
 			line-height: 14px
 			display: inline-block
@@ -63,17 +78,6 @@ body
 			&:hover
 				span
 					border-bottom: 2px solid #666
-		&:first-child
-			position: relative
-			padding-left: 50px
-			&:hover
-				span
-					border: none
-			img
-				width: 70px
-				position: absolute
-				left: 0
-				top: 0
 			span
 				height: 70px
 				display: block
