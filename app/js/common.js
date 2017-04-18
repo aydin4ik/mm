@@ -1,7 +1,43 @@
 $(function() {
 
-	$('.navigation li').hover(function(){
+	$('.navigation .enabled').hover(function(){
+
+        var self = $(this),
+            selfId = self.attr('id');
 		
-	});
+		$('.sub').hover(
+			function() {
+			clearInterval(hideMenuTimer);
+			},
+			function() {
+			$(this).hide();
+			$('.enabled').removeClass('active');
+			$('#' + selfId + '-sub').hide();
+			}
+		);
+
+
+
+        showSubmenuTimer = setTimeout(function() {
+            $('.sub').slideDown('fast');
+			$('#' + selfId + '-sub').show();
+        }, 100);
+
+        curMenuitem = $(this);
+        $(this).addClass('active');
+    
+        },
+        function(){
+			var self = this, id = $(this).attr('id');
+			hideMenuTimer = setTimeout(function() {
+				$('#' + id + '-sub').hide();
+				$('.sub').hide();
+				$(self).removeClass('active');
+			}, 20);
+			clearInterval(showSubmenuTimer);
+        }
+    );
+
+    
 
 });
